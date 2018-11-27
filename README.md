@@ -7,7 +7,7 @@ npm install simple-functional-loader --save-dev
 ```
 
 ## usage
-```
+```javascript
 // webpack.config.js
 const { createLoader } = require('simple-functional-loader')
 module.exports = {
