@@ -1,0 +1,26 @@
+{
+  "name": "simple-functional-loader",
+  "version": "1.0.0",
+  "description": "use function as webpack loader option",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovetingyuan/simple-functional-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "function",
+    "inline",
+    "functional"
+  ],
+  "author": "tingyuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lovetingyuan/simple-functional-loader/issues"
+  },
+  "homepage": "https://github.com/lovetingyuan/simple-functional-loader#readme"
+}
