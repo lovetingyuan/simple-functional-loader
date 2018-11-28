@@ -1,2 +1,4 @@
 import a from './test.html';
-console.log(a);
+import { b } from './test.ts';
+
+console.log(a + b);

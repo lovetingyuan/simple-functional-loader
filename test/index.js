@@ -16,6 +16,12 @@ test('simple functional loader', function (t) {
           t.equal(source, fs.readFileSync(resolve('test.html'), 'utf8'));
           return `module.exports = ${JSON.stringify(source.trim())}`;
         })
+      }, {
+        test: /.ts$/,
+        use: createLoader(function(source) {
+          t.equal(source, fs.readFileSync(resolve('test.ts'), 'utf8'));
+          return source.replace(/:\s*\w+? /g, ' ');
+        })
       }]
     }
   });

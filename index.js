@@ -10,7 +10,7 @@ module.exports.createLoader = function createLoader(processor) {
   if (typeof processor !== 'function') {
     throw Err('argument passed to createLoader must be a (es5) function.\n' + processor);
   }
-  if (!processor.toString().startsWith('function')) {
+  if (processor.toString().indexOf('function')) {
     throw Err('argument passed to createLoader can not be arrow function or class.\n' + processor);
   }
   const id = Math.random();
