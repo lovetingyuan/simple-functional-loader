@@ -16,12 +16,18 @@ test('simple functional loader', function (t) {
         test: /\.html$/,
         use: createLoader(function(source) {
           t.equal(source, fs.readFileSync(resolve('test.html'), 'utf8'));
+          t.equal('resourceQuery' in this, true);
+          t.equal(this.webpack, true);
+          t.equal(this.loaderIndex, 0);
           return `module.exports = ${JSON.stringify(source.trim() + `<!--${mark}-->`)}`;
         })
       }, {
         test: /.ts$/,
         use: createLoader(function(source) {
           t.equal(source, fs.readFileSync(resolve('test.ts'), 'utf8'));
+          t.equal('resourcePath' in this, true);
+          t.equal(this.webpack, true);
+          t.equal(this.loaderIndex, 0);
           return source.replace(/:\s*\w+? /g, ' ');
         })
       }]
