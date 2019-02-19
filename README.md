@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.html$/,
+        test: /\.html$/,
         use: createLoader(function(source) { // must be an "ES5" function!
           return processHTML(source)
         })
