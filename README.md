@@ -31,7 +31,7 @@ module.exports = {
 }
 ```
 
-`createLoader` will return a rule object:
+`createLoader` will return a `UseEntry` object:
 ```
 {
   loader: string,
