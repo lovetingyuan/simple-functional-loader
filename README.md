@@ -19,13 +19,23 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: createLoader(function(source, map) { // must be an "ES5" function!
-          // use "this" as loaderContext
-          return processHTML(source, map)
-        })
+        use: [
+          createLoader(function(source, map) { // must be an "ES5" function!
+            // use "this" as loaderContext
+            return processHTML(source, map)
+          })
+        ]
       }
     ]
   }
+}
+```
+
+`createLoader` will return a rule object:
+```
+{
+  loader: string,
+  options: object
 }
 ```
 
