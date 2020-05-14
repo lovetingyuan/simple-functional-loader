@@ -1,6 +1,6 @@
 {
   "name": "simple-functional-loader",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "use function as webpack loader option",
   "main": "index.js",
   "scripts": {
