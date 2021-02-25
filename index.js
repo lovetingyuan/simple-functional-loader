@@ -1,5 +1,5 @@
 const loaderUtils = require('loader-utils')
-const name = require('./package.json').name
+const { name } = require('./package.json')
 
 module.exports = function simpleFunctionalLoader(...args) {
   const { processor } = loaderUtils.getOptions(this)
@@ -11,7 +11,7 @@ module.exports.createLoader = function createLoader(processor) {
     typeof processor !== 'function' ||
     Function.prototype.toString.call(processor).indexOf('function')
   ) {
-    throw new Error(name + ': parameter passed to "createLoader" must be an ES5 function.\n' + processor)
+    throw new Error(name + ': parameter passed to "createLoader" must be an ES5 function.')
   }
   return {
     loader: __filename,
